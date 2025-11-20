@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible menu</title>
+
+    <link rel="stylesheet" href="css/forside-style.css">
+    <script src="https://kit.fontawesome.com/faeb6a1351.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+   <header role="banner">
+    <nav role="navigation" aria-label="Hovednavigation">
+        <img src="img/logo.svg" alt="SafeSocial logo">
+        <a class="logo-header" href="forside.html">SAFESOCIAL</a>
+
+        <button 
+            id="bars" 
+            aria-expanded="false" 
+            aria-controls="menu"
+            aria-label="Åbn eller luk navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul id="menu">
+            <li><a class="active" href="forside.html" aria-current="page">Forside</a></li>
+            <li><a href="underside.html">Hvad er AI?</a></li>
+            <li><a href="kontaktform.html">Kontakt os</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <main id="main" role="main">
+
+        <!-- HERO -->
+        <section>
+            <div class="hero">
+                <img src="img/forside-hero-billede.jpg" 
+                     alt="Person, med robot hånd, der arbejder på sin computer">
+                
+                <div class="hero-textblock">
+                    <h1>AI: PÅ SOCIALE MEDIER</h1>
+                    <p>Opdag, hvordan kunstig intelligens former indholdet på sociale medier, og få tips til at tænke kritisk som bruger.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO SEKTION 1 -->
+        <section class="info-et">
+            <div class="billede-tekst">
+                <img src="img/socialemedier.jpg" 
+                     alt="Person der bruger forksellige socialemedier på sin telefon">
+
+                <div class="tekst-indhold">
+                    <h2>Hvad er AI på de sociale medier?</h2>
+                    <p>Falske opslag og skjulte reklamer produceret af AI gør det sværere at skelne fakta fra fiktion.</p>
+                    <a class="btn" href="underside.html">LÆS MERE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO SEKTION 2 -->
+        <section class="info-to">
+            <div class="billede-tekst">
+                <img src="img/telefon.jpg" 
+                     alt="en telefonskærm med forksellige socialemediers logoer">
+
+                <div class="tekst-indhold">
+                    <h2>Hvordan du kan spotte AI på din feed</h2>
+                    <p>AI-indhold viser sig ofte gennem skarpe billeder, ensartede mønstre og reklamer, der virker skræddersyet til dig.</p>
+                    <a class="btn" href="underside.html">LÆS MERE</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="kontakt-footer" role="contentinfo">
+            <h3>Kontakt</h3>
+
+            <div class="kontakt-linje">
+                <p>Mail: SafeSocial@gmail.com</p>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </div>
+
+            <div class="kontakt-linje">
+                <p>Tlf: +45 22334455</p>
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
