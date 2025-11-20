@@ -1,0 +1,309 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fa;
+}
+
+h1, h2 {
+  color: #0F4369;
+  margin: 1.2em 0 0.5em 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+p, a {
+  font-size: 1.1em;
+}
+
+p {
+  padding: 0 1.5em 1.2em 1.5em;
+}
+
+main {
+  margin: auto;
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid #ffbf80;
+  outline-offset: 3px;
+}
+
+/*HEADER*/
+
+header {
+  background-color: #0F4369;
+  border-bottom: 4px solid #2e7386;
+}
+
+.logo-header {
+  font-size: 30px;
+}
+
+nav {
+  height: 4em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 70px;
+}
+
+nav #bars {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav a {
+  color: white;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: #27a5ff;
+}
+
+/*HERO*/
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.hero img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.hero-textblock {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  max-width: 460px;
+  background-color: rgba(255,255,255,0.95);
+  padding: 1.7rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+.hero-textblock h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.1rem;
+  color: #0F4369;
+}
+
+.hero-textblock p {
+  padding: 0;
+  font-size: 1rem;
+}
+
+/*INFO SEKTIONER*/
+
+main section:nth-child(1) {
+  border-bottom: 3px #DB5000 solid;
+  padding-bottom: 1.5em;
+}
+
+.billede-tekst {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.billede-tekst img {
+  width: 45%;
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+.tekst-indhold {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 520px;
+}
+
+.info-et,
+.info-to {
+  background-color: #D2E6EE;
+  border-bottom: 3px #DB5000 solid;
+  padding: 3rem 1rem;
+}
+
+.info-et {
+  border-top: 3px #DB5000 solid;
+}
+
+.info-to .tekst-indhold {
+  padding-right: 2rem;
+}
+
+.info-to .billede-tekst {
+  flex-direction: row-reverse;
+}
+
+/*BUTTON*/
+
+.btn {
+  background-color: #DB5000;
+  padding: 0.9em;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto 2rem auto;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a23100;
+}
+
+/*FOOTER*/
+
+.kontakt-footer {
+  background-color: #0F4369;
+  color: white;
+  padding: 2.5rem 2rem;
+  border-top: 4px solid #DB5000;
+}
+
+.kontakt-footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.kontakt-linje {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px dotted white;
+  padding: 0.8rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.kontakt-linje p {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.kontakt-linje i {
+  font-size: 1.8rem;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 900px) {
+
+  .hero img {
+    height: 260px;
+  }
+
+  .hero-textblock {
+    position: static;
+    margin: 1rem;
+    box-shadow: none;
+    max-width: 100%;
+  }
+
+  .billede-tekst,
+  .info-to .billede-tekst {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .billede-tekst img {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  nav #bars {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    font-size: 2.3em;
+    color: white;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    border-top: 4px solid #0F4369;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav .show {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 1rem 0;
+    background-color: #12629c;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .hero-textblock h1 {
+    font-size: 1.7rem;
+  }
+}

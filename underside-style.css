@@ -1,0 +1,271 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f9fa;
+}
+
+h1, h2{
+    color: #0F4369;
+    font-weight: 300;
+    margin-top: 0;
+}
+h3{
+    color: white;
+}
+img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+p, a {
+    font-size: 1.1rem;
+}
+
+/*HEADER*/
+
+header {
+    background-color: #0F4369;
+    border-bottom: 4px solid #2e7386;
+}
+
+.logo-header {
+    font-size: 30px;
+}
+
+nav {
+    height: 4em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 70px;
+}
+
+nav #bars {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #27a5ff;
+}
+
+/*INTRO*/
+
+.intro {
+    background-color: white;
+    padding: 3rem 1.5rem;
+}
+
+.intro-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.intro h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.intro-billede img {
+    max-width: 480px;
+    border-radius: 12px;
+}
+
+/*INFO BLOKKE*/
+
+.main-indhold {
+    background-color: #D2E6EE;
+    padding: 3rem 1.5rem;
+    border-top: 4px solid #DB5000;
+    border-bottom: 4px solid #DB5000;
+}
+
+.main-indhold h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.info-blok {
+    background-color: white;
+    padding: 2.5rem;
+    margin: 0 auto 2.5rem auto;
+    max-width: 1100px;
+    border-radius: 12px;
+    border: 1px solid #b9d3da;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+.info-blok h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.info-row {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.info-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.info-tekst {
+    flex: 1.2;
+}
+
+.info-tekst p {
+    margin-bottom: 1.2rem;
+}
+
+.info-billede {
+    flex: 1;
+}
+
+.info-billede img {
+    border-radius: 12px;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+/* BOTTOM */
+
+.bottom {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: white;
+}
+
+.bottom h2 {
+    font-size: 1.8rem;
+}
+
+.bottom a {
+    font-weight: bold;
+    color: #0F4369;
+}
+
+/*FOOTER*/
+
+.kontakt-footer {
+    background-color: #0F4369;
+    padding: 2.5rem 2rem;
+    color: white;
+    border-top: 4px solid #DB5000;
+}
+
+.kontakt-footer h3 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.kontakt-linje {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px dotted white;
+    padding: 0.8rem 0;
+}
+
+@media screen and (max-width: 900px) {
+
+    .intro-container,
+    .info-row,
+    .info-row.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-tekst {
+        text-align: left;
+    }
+
+    .intro-billede img,
+    .info-billede img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .info-blok {
+        padding: 2rem 1.5rem;
+    }
+
+    nav #bars {
+        display: flex;
+        border: none;
+        background: transparent;
+        font-size: 2.3em;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #12629c;
+        border-top: 4px solid #0F4369;
+        width: 100%;
+        padding: 1rem 0;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    nav .show {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    nav ul li a {
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    p, a {
+        font-size: 1rem;
+    }
+
+    .intro h2 {
+        font-size: 1.7rem;
+    }
+
+    .main-indhold h2 {
+        font-size: 1.5rem;
+    }
+}
